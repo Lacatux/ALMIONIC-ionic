@@ -13,8 +13,7 @@ export class HomePage implements OnInit {
 
   cursos;
   
-  constructor(private activatedRoute: ActivatedRoute, private cursoService: CursoService, public loadingController: 
-    LoadingController) { }
+  constructor(private activatedRoute: ActivatedRoute, private cursoService: CursoService, public loadingController:LoadingController) { }
 
     async getCursosHome() {
       const loading = await this.loadingController.create({ message: 'Cargando...' }); 

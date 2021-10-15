@@ -5,5 +5,21 @@
 </ion-header>
 
 <ion-content>
+  <form class="logueo">
+    <ion-item lines="full">
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input name="usu" type="text" required [(ngModel)]="usuario.user"></ion-input>
+    </ion-item>
 
+    <ion-item lines="full">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input name="pass" type="password" required [(ngModel)]="usuario.pwd"></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="submit()" expand="block">Iniciar Sesión</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
 </ion-content>

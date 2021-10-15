@@ -16,6 +16,9 @@ export class AppComponent {
   loggedCheck() {
     if (sessionStorage.getItem('user') != null && this.appPages.length < 3) {
       this.appPages.push({ title: 'Alta', url: '/alta', icon: 'add-circle-outline' });
+      this.appPages[1].title = 'Cerrar Sesión';
+      this.appPages[1].icon = 'log-out-outline';
+      this.appPages[1].url = '/logout';
     } else {
       this.appPages.splice(2);
     }
